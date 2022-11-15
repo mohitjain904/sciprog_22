@@ -5,6 +5,6 @@ int main ()
     int c = 10;
     char b = 'b';
     float s = 2.33454;
-    printf("%c %d %.2f",b,c,s);
+    printf("%c %d %.2f",b,c,s); // Printing the Output
     return 0;
 }
