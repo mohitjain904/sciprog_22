@@ -1,9 +1,9 @@
-# Week 1 Practical
+# Week 2 Practical
 
 This week practical files are added in this folder.
 This folder contains two programs 
 
-1. Printing 
+1. Conversion
 2. Scanning
 
 Use GCC Compiler to compile and execute the code.
@@ -16,16 +16,10 @@ Compile using following command
 
 For Question 1 :
 
-    gcc Print.c -o Print.c
+    gcc Conversion.c -o Conversion.c -lm
 
     Print the Output using this command
 
-    ./Print.c
+    ./Conversion.c
 
-For Question 2 :
-
-    gcc Scan.c -o Scan.c
-
-    Scan the Output using this command
-
-    ./Scan.c
+    (-lm is to map math library to the gcc)
