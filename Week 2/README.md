@@ -4,7 +4,7 @@ This week practical files are added in this folder.
 This folder contains two programs 
 
 1. Conversion
-2. Scanning
+2. Sum of Series
 
 Use GCC Compiler to compile and execute the code.
 
@@ -23,3 +23,11 @@ For Question 1 :
     ./Conversion.c
 
     (-lm is to map math library to the gcc)
+
+For Question 2 :
+
+    gcc Sum.c -o Sum.c
+
+    Print the Output using this command
+
+    ./Sum.c
