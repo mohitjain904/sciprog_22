@@ -13,10 +13,10 @@ To Run this Program in linux machine:
 
 Compile using following command
 
-    gcc Conversion.c -o Conversion.c -lm
+    gcc Trapezodial.c -o Trapezodial.c -lm
 
     Print the Output using this command
 
-    ./Conversion.c
+    ./Trapezodial.c
 
     (-lm is to map math library to the gcc)
