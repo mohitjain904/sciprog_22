@@ -23,7 +23,7 @@ int get_num_lines(char filename[MAX_FILE_NAME])
     return count;
 }
 
-int main(void)
+int main()
 {
     FILE *f;
     char filename[MAX_FILE_NAME];
@@ -31,27 +31,34 @@ int main(void)
     scanf("%s",filename);
 
     
-    int n = get_num_lines(filename);
+    int n = get_num_lines(filename) + 1 ;
 
     f = fopen(filename,"r");
 
     int i;
-    int **magicsquare = malloc(n*sizeof(int *)); 
-    for(i =0;i<n;i++)
+ 
+    int* arr[n];
+    for (i = 0; i < n; i++)
     {
-        magicsquare[i] = malloc(n*sizeof(int));
+        arr[i] = (int*)malloc(n * sizeof(int));
     }
-    
     int j;
     for(i=0;i<n;i++)
     {
         for(j=0;j<n;j++)
         {
-            fscanf(f,"%d",&magicsquare[i][j]);
+            fscanf(f,"%d",&arr[i][j]);
         }
-
     }
-    int flag = isMagicSquare(magicsquare,n);
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            printf("%d",arr[i][j]);
+        }
+        printf("\n");
+    }
+    int flag = isMagicSquare(arr,n);
     if(flag==1)
     {
         printf("Its a Magic Square\n");
@@ -60,13 +67,10 @@ int main(void)
     {
         printf("Its not a Magic Square\n");
     }
-
-    for(i = 0;i<n;i++)
+    for (i=0;i<n;i++)
     {
-        free(magicsquare[i]);
+        free(arr[i]);
     }
-    
-    free(magicsquare);
     fclose(f);
     return 0;
 }

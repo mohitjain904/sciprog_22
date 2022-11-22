@@ -1,5 +1,5 @@
 //Check if a matrix is a magic square
-int isMagicSquare(int square[100][100], const int n) 
+int isMagicSquare(int **square, const int n) 
 {
     if(n<0)
     {
