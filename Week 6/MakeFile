@@ -1,0 +1,20 @@
+CC = gcc
+CCFLAGS = -O3
+LDFLAGS = -lm
+
+all: matmultc
+
+matmultc: Main.o MatrixMultiplication.o
+	$(CC) -o $@ $^ $(LDFLAGS)
+##$(CC) -o matmultc Main.o MatrixMultiplication.o $(LDFLAGS) 
+
+matmult.o: MatrixMultiplication.c
+	$(CC) -c $(CCFLAGS) $<
+##$(CC) -c $(CCFLAGS) MatrixMultiplication.c
+
+main.o: main.c
+	$(CC) -c $(CCFLAGS) $<
+##$(CC) -c $(CCFLAGS) Main.c
+
+clean:
+	rm *.o
