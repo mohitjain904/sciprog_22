@@ -12,7 +12,7 @@ matmult.o: MatrixMultiplication.c
 	$(CC) -c $(CCFLAGS) $<
 ##$(CC) -c $(CCFLAGS) MatrixMultiplication.c
 
-main.o: main.c
+main.o: Main.c
 	$(CC) -c $(CCFLAGS) $<
 ##$(CC) -c $(CCFLAGS) Main.c
 
