@@ -35,12 +35,12 @@ int main()
     ierror=scanf("%d %d", &a, &b);
     if(ierror !=2)
     {
-        printf("Please enter two numbers\n");
+        printf("ENter Numbers\n");
         return 1;
     }
     if(a<=0 || b<=0)
     {
-        printf("These numbers are not positive!\n");
+        printf("Not Positive\n");
         return 1;
     }
     //Print the Output
